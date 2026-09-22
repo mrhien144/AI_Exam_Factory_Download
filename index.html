@@ -692,6 +692,67 @@
             }
         }
 
+
+        .windows-help {
+            margin-top: 60px;
+        }
+
+        .windows-help-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .help-card {
+            background: white;
+            border-radius: 15px;
+            padding: 26px;
+            border: 1px solid #e6edf5;
+            box-shadow: 0 6px 24px rgba(25,45,75,.08);
+        }
+
+        .help-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2f7df6;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .help-card h3 {
+            margin: 0 0 10px;
+            color: #174a7e;
+            font-size: 20px;
+        }
+
+        .help-card p {
+            margin: 0;
+            color: #4c586b;
+            line-height: 1.65;
+        }
+
+        .security-note {
+            margin-top: 22px;
+            background: #eef5ff;
+            border-left: 4px solid #2f7df6;
+            padding: 18px 20px;
+            border-radius: 8px;
+            color: #31435a;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 850px) {
+            .windows-help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
 </style>
 </head>
 
@@ -1067,6 +1128,60 @@
     </div>
 
 </section>
+
+<section class="windows-help" id="windows-help">
+
+    <h2 class="section-title">
+        Cài đặt an toàn trên Windows
+    </h2>
+
+    <p class="section-desc">
+        AI Exam Factory được phát hành dành cho Windows 10/11 64-bit.
+        Trong một số trường hợp, Windows SmartScreen có thể hiển thị cảnh báo
+        với phần mềm mới tải từ Internet.
+    </p>
+
+    <div class="windows-help-grid">
+
+        <div class="help-card">
+            <div class="help-icon">1</div>
+            <h3>Tải từ trang chính thức</h3>
+            <p>
+                Chỉ tải AI Exam Factory từ trang này để bảo đảm
+                bạn đang sử dụng đúng bộ cài do nhà phát triển phát hành.
+            </p>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">2</div>
+            <h3>Nếu Windows SmartScreen xuất hiện</h3>
+            <p>
+                Kiểm tra tên file là
+                AI_Exam_Factory_Setup_x.x.x.exe.
+                Nếu file được tải từ trang chính thức,
+                chọn More info rồi chọn Run anyway để tiếp tục.
+            </p>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">3</div>
+            <h3>Cài đặt cho tài khoản hiện tại</h3>
+            <p>
+                Khi được hỏi chế độ cài đặt, khuyến nghị chọn
+                Install for me only (recommended).
+            </p>
+        </div>
+
+    </div>
+
+    <div class="security-note">
+        <strong>Lưu ý:</strong>
+        Không cài đặt các bản AI Exam Factory được chia sẻ lại
+        từ nguồn không xác định hoặc đã bị đổi tên/chỉnh sửa.
+    </div>
+
+</section>
+
 </main>
 
 
