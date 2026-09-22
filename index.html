@@ -268,6 +268,69 @@
             opacity: .94;
         }
 
+        .screenshots-section {
+            margin-top: 60px;
+        }
+
+        .section-desc {
+            max-width: 820px;
+            margin: -18px auto 34px;
+            text-align: center;
+            color: #5a6778;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 26px;
+        }
+
+        .shot-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 28px rgba(25,45,75,.10);
+            border: 1px solid #e7edf5;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .shot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 34px rgba(25,45,75,.16);
+        }
+
+        .shot-card img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            background: #0a1422;
+        }
+
+        .shot-content {
+            padding: 22px 24px 24px;
+        }
+
+        .shot-content h3 {
+            margin: 0 0 10px;
+            color: #174a7e;
+            font-size: 22px;
+        }
+
+        .shot-content p {
+            margin: 0;
+            color: #4c586b;
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        @media (max-width: 850px) {
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -506,6 +569,72 @@
 
     </div>
 
+
+<section class="screenshots-section">
+
+    <h2 class="section-title">
+        Khám phá giao diện AI Exam Factory
+    </h2>
+
+    <p class="section-desc">
+        Giao diện trực quan, rõ ràng và được thiết kế
+        để giáo viên thao tác nhanh khi quản lý câu hỏi,
+        tạo đề và trộn nhiều mã đề.
+    </p>
+
+    <div class="screenshots-grid">
+
+        <div class="shot-card">
+            <img src="assets/screenshots/dashboard.png"
+                 alt="Trang chủ AI Exam Factory">
+            <div class="shot-content">
+                <h3>Trang chủ</h3>
+                <p>
+                    Theo dõi nhanh số lượng câu hỏi,
+                    số đề đã tạo và luồng làm việc khuyến nghị.
+                </p>
+            </div>
+        </div>
+
+        <div class="shot-card">
+            <img src="assets/screenshots/tao-de-ai.png"
+                 alt="Tạo đề AI">
+            <div class="shot-content">
+                <h3>Tạo đề AI</h3>
+                <p>
+                    Nhập yêu cầu bằng ngôn ngữ tự nhiên,
+                    tạo đề gốc và trộn nhiều mã đề nhanh chóng.
+                </p>
+            </div>
+        </div>
+
+        <div class="shot-card">
+            <img src="assets/screenshots/ngan-hang-cau-hoi.png"
+                 alt="Ngân hàng câu hỏi">
+            <div class="shot-content">
+                <h3>Ngân hàng câu hỏi</h3>
+                <p>
+                    Quản lý câu hỏi theo bài, dạng và mức độ;
+                    hỗ trợ Word, Excel và PDF.
+                </p>
+            </div>
+        </div>
+
+        <div class="shot-card">
+            <img src="assets/screenshots/ma-tran-de.png"
+                 alt="Ma trận đề">
+            <div class="shot-content">
+                <h3>Ma trận đề</h3>
+                <p>
+                    Xây dựng đề theo ma trận và kiểm soát
+                    số câu theo từng mức độ nhận thức.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 </main>
 
 
