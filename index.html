@@ -145,6 +145,129 @@
                 font-size: 17px;
             }
         }
+    
+        .pricing {
+            margin-top: 55px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 24px;
+            box-shadow: 0 5px 22px rgba(25,45,75,.08);
+            border: 1px solid #e8eef5;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border: 2px solid #2f7df6;
+            transform: translateY(-5px);
+        }
+
+        .badge {
+            position: absolute;
+            top: -13px;
+            right: 18px;
+            background: #2f7df6;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .price-card h3 {
+            margin-top: 0;
+            color: #174a7e;
+            font-size: 22px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 18px 0;
+            color: #102a43;
+        }
+
+        .price-note {
+            color: #697586;
+            font-size: 14px;
+        }
+
+        .price-card ul {
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #4c586b;
+        }
+
+        .install-section {
+            margin-top: 55px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .step {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 22px rgba(25,45,75,.08);
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #174a7e;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 19px;
+            margin-bottom: 18px;
+        }
+
+        .step h3 {
+            margin: 0 0 10px;
+            color: #174a7e;
+        }
+
+        .step p {
+            margin: 0;
+            color: #4c586b;
+            line-height: 1.6;
+        }
+
+        .bottom-cta {
+            margin-top: 55px;
+            background: linear-gradient(135deg, #0a2540, #174a7e);
+            color: white;
+            padding: 42px 25px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .bottom-cta h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        .bottom-cta p {
+            font-size: 17px;
+            line-height: 1.6;
+            opacity: .94;
+        }
+
     </style>
 </head>
 
@@ -240,6 +363,127 @@
     </div>
 
 
+
+    <section class="pricing">
+
+        <h2 class="section-title">
+            Gói sử dụng
+        </h2>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>FREE</h3>
+                <div class="price">0đ</div>
+                <div class="price-note">Dành cho người dùng trải nghiệm</div>
+                <ul>
+                    <li>5 lượt tạo đề gốc</li>
+                    <li>Trộn mã đề không giới hạn từ đề đã tạo</li>
+                    <li>Quản lý ngân hàng câu hỏi</li>
+                    <li>Xuất Word và PDF</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>PRO 1 THÁNG</h3>
+                <div class="price">39.000đ</div>
+                <div class="price-note">Sử dụng trong 1 tháng</div>
+                <ul>
+                    <li>Tạo đề không giới hạn</li>
+                    <li>Đầy đủ chức năng PRO</li>
+                    <li>Trộn nhiều mã đề</li>
+                    <li>Gia hạn tự động sau thanh toán</li>
+                </ul>
+            </div>
+
+            <div class="price-card featured">
+                <div class="badge">PHỔ BIẾN</div>
+                <h3>PRO 1 NĂM</h3>
+                <div class="price">299.000đ</div>
+                <div class="price-note">Sử dụng trong 12 tháng</div>
+                <ul>
+                    <li>Tạo đề không giới hạn</li>
+                    <li>Đầy đủ chức năng PRO</li>
+                    <li>Quản lý và trộn đề thuận tiện</li>
+                    <li>Tiết kiệm hơn gói tháng</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>PRO 3 NĂM</h3>
+                <div class="price">599.000đ</div>
+                <div class="price-note">Sử dụng trong 36 tháng</div>
+                <ul>
+                    <li>Tạo đề không giới hạn</li>
+                    <li>Đầy đủ chức năng PRO</li>
+                    <li>Thời hạn dài</li>
+                    <li>Chi phí sử dụng tối ưu</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="install-section">
+
+        <h2 class="section-title">
+            Cài đặt chỉ trong 3 bước
+        </h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Tải bộ cài</h3>
+                <p>
+                    Bấm nút TẢI AI EXAM FACTORY để tải
+                    phiên bản mới nhất dành cho Windows.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Cài đặt</h3>
+                <p>
+                    Mở file cài đặt và làm theo hướng dẫn.
+                    Khuyến nghị chọn Install for me only.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Đăng nhập và sử dụng</h3>
+                <p>
+                    Mở AI Exam Factory, đăng nhập tài khoản
+                    và bắt đầu xây dựng ngân hàng câu hỏi, tạo đề.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="bottom-cta">
+
+        <h2>
+            Bắt đầu với AI Exam Factory
+        </h2>
+
+        <p>
+            Tạo đề nhanh hơn, quản lý câu hỏi khoa học hơn
+            và giảm thời gian xử lý đề thủ công.
+        </p>
+
+        <a class="download-btn"
+           href="https://github.com/mrhien144/AI_Exam_Factory_Download/releases/latest">
+            TẢI PHIÊN BẢN MỚI NHẤT
+        </a>
+
+    </section>
+
     <div class="requirements">
 
         <h2>Yêu cầu hệ thống</h2>
@@ -266,7 +510,7 @@
 
 
 <footer class="footer">
-    © 2026 AI Exam Factory. All rights reserved.
+    © 2026 Bản quyền thuộc về Mr Hiển
 </footer>
 
 
