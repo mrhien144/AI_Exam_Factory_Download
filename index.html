@@ -753,6 +753,87 @@
             }
         }
 
+
+        .verify-section {
+            margin-top: 60px;
+        }
+
+        .verify-card {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid #e4ebf4;
+            box-shadow: 0 8px 28px rgba(25,45,75,.08);
+        }
+
+        .verify-label {
+            font-weight: 700;
+            color: #174a7e;
+            margin-bottom: 14px;
+            font-size: 16px;
+        }
+
+        .hash-box {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: #0c1b2c;
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .hash-box code {
+            flex: 1;
+            color: #b8d7ff;
+            font-size: 13px;
+            line-height: 1.6;
+            word-break: break-all;
+        }
+
+        .copy-hash-btn {
+            border: none;
+            background: #2f7df6;
+            color: white;
+            border-radius: 8px;
+            padding: 11px 15px;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .copy-hash-btn:hover {
+            background: #1768df;
+        }
+
+        .verify-help {
+            margin-top: 24px;
+            color: #4c586b;
+            line-height: 1.65;
+        }
+
+        .command-box {
+            margin: 12px 0;
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: #f2f6fb;
+            color: #1d3552;
+            font-family: Consolas, monospace;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 700px) {
+            .hash-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .copy-hash-btn {
+                width: 100%;
+            }
+        }
+
 </style>
 </head>
 
@@ -1182,6 +1263,62 @@
 
 </section>
 
+
+<section class="verify-section" id="verify">
+
+    <h2 class="section-title">
+        Xác minh bộ cài
+    </h2>
+
+    <p class="section-desc">
+        Bạn có thể đối chiếu mã SHA-256 dưới đây để kiểm tra
+        file cài đặt tải về có đúng với bản phát hành chính thức
+        của AI Exam Factory hay không.
+    </p>
+
+    <div class="verify-card">
+
+        <div class="verify-label">
+            SHA-256 • AI Exam Factory 1.0.0
+        </div>
+
+        <div class="hash-box">
+
+            <code id="sha256Hash">1DA59F18A49FE72BA59294932D9FD6B42F3D2C0A2E84D7ABF46393B07AA3DA0C</code>
+
+            <button
+                type="button"
+                class="copy-hash-btn"
+                onclick="copySha256()">
+                Sao chép mã
+            </button>
+
+        </div>
+
+        <div class="verify-help">
+
+            <strong>Cách kiểm tra trên Windows:</strong>
+
+            <p>
+                Mở PowerShell tại thư mục chứa file vừa tải,
+                sau đó chạy:
+            </p>
+
+            <div class="command-box">
+                Get-FileHash .\AI_Exam_Factory_Setup_1.0.0.exe -Algorithm SHA256
+            </div>
+
+            <p>
+                Nếu mã Hash hiển thị giống hoàn toàn mã ở trên,
+                file tải về chưa bị thay đổi so với bản phát hành chính thức.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 </main>
 
 
@@ -1295,6 +1432,29 @@ document.addEventListener("keydown", function(event) {
         document.body.style.overflow = "";
     }
 });
+</script>
+
+
+<script>
+async function copySha256() {
+    const hash = document.getElementById("sha256Hash").textContent.trim();
+
+    try {
+        await navigator.clipboard.writeText(hash);
+
+        const button = document.querySelector(".copy-hash-btn");
+        const oldText = button.textContent;
+
+        button.textContent = "Đã sao chép ✓";
+
+        setTimeout(function () {
+            button.textContent = oldText;
+        }, 1800);
+
+    } catch (error) {
+        alert("Không thể sao chép tự động. Hãy chọn và sao chép mã SHA-256 thủ công.");
+    }
+}
 </script>
 
 </body>
