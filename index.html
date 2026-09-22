@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Exam Factory - Phần mềm tạo và quản lý đề thi</title>
+
+    <meta name="description"
+          content="AI Exam Factory - Tạo đề, quản lý ngân hàng câu hỏi, trộn mã đề và xuất Word/PDF.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f5f8fc;
+            color: #172033;
+        }
+
+        .header {
+            background: #081d38;
+            padding: 18px 24px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            max-height: 54px;
+            max-width: 280px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0a2540, #174a7e);
+            color: white;
+            padding: 70px 24px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            margin: 0 0 16px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.6;
+            opacity: .95;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 17px 32px;
+            background: #2f7df6;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.18);
+        }
+
+        .download-btn:hover {
+            background: #1768df;
+        }
+
+        .version {
+            margin-top: 14px;
+            font-size: 14px;
+            opacity: .85;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 24px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 22px rgba(25,45,75,.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #174a7e;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #4c586b;
+        }
+
+        .requirements {
+            background: white;
+            margin-top: 45px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 22px rgba(25,45,75,.08);
+        }
+
+        .requirements h2 {
+            margin-top: 0;
+        }
+
+        .footer {
+            background: #081d38;
+            color: #d8e3ef;
+            text-align: center;
+            padding: 28px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <img src="assets/logo_horizontal.png"
+             alt="AI Exam Factory">
+    </div>
+</header>
+
+<section class="hero">
+
+    <h1>AI Exam Factory</h1>
+
+    <p>
+        Phần mềm hỗ trợ giáo viên tạo đề,
+        quản lý ngân hàng câu hỏi,
+        trộn nhiều mã đề và xuất đề thi
+        sang Word hoặc PDF.
+    </p>
+
+    <a class="download-btn"
+       href="https://github.com/mrhien144/AI_Exam_Factory_Download/releases/latest/download/AI_Exam_Factory_Setup_1.0.0.exe">
+        TẢI AI EXAM FACTORY
+    </a>
+
+    <div class="version">
+        Phiên bản 1.0.0 • Windows 64-bit • Bộ cài khoảng 62,76 MB
+    </div>
+
+</section>
+
+
+<main class="container">
+
+    <h2 class="section-title">
+        Các chức năng nổi bật
+    </h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>Tạo đề AI</h3>
+            <p>
+                Tạo đề từ ngân hàng câu hỏi
+                và yêu cầu của giáo viên.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Ngân hàng câu hỏi</h3>
+            <p>
+                Quản lý, chỉnh sửa và tổ chức
+                câu hỏi theo môn học, lớp và bài học.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Tạo đề từ ma trận</h3>
+            <p>
+                Xây dựng đề theo mức độ nhận thức
+                và cấu trúc ma trận đã thiết lập.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Trộn mã đề</h3>
+            <p>
+                Tự động trộn câu hỏi và phương án,
+                hỗ trợ tạo nhiều mã đề khác nhau.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Xuất Word</h3>
+            <p>
+                Xuất đề sang Microsoft Word
+                để giáo viên tiếp tục chỉnh sửa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Xuất PDF</h3>
+            <p>
+                Xuất đề thành PDF
+                thuận tiện cho lưu trữ và in ấn.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="requirements">
+
+        <h2>Yêu cầu hệ thống</h2>
+
+        <p>
+            <strong>Hệ điều hành:</strong>
+            Windows 10 hoặc Windows 11, 64-bit.
+        </p>
+
+        <p>
+            <strong>Kết nối Internet:</strong>
+            Cần thiết cho đăng nhập,
+            xác thực tài khoản và một số chức năng trực tuyến.
+        </p>
+
+        <p>
+            <strong>Phiên bản hiện tại:</strong>
+            AI Exam Factory 1.0.0
+        </p>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+    © 2026 AI Exam Factory. All rights reserved.
+</footer>
+
+</body>
+</html>
