@@ -834,6 +834,144 @@
             }
         }
 
+
+        .support-section {
+            margin-top: 65px;
+        }
+
+        .support-card {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 26px 30px;
+            border-radius: 16px;
+            border: 1px solid #e5ecf4;
+            box-shadow: 0 8px 28px rgba(25,45,75,.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .support-email-block {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .support-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #eef5ff;
+            color: #2f7df6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .support-label {
+            color: #677487;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .support-email {
+            color: #174a7e;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .support-email:hover {
+            text-decoration: underline;
+        }
+
+        .support-button {
+            background: #2f7df6;
+            color: white;
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 9px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .support-button:hover {
+            background: #1768df;
+        }
+
+        .faq-wrap {
+            margin-top: 60px;
+        }
+
+        .faq-title {
+            margin-bottom: 28px;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #e4ebf4;
+            border-radius: 12px;
+            padding: 0 20px;
+            box-shadow: 0 4px 16px rgba(25,45,75,.05);
+        }
+
+        .faq-item summary {
+            cursor: pointer;
+            padding: 18px 0;
+            font-weight: 700;
+            color: #174a7e;
+            font-size: 16px;
+        }
+
+        .faq-item p {
+            color: #4c586b;
+            line-height: 1.7;
+            margin-top: 0;
+            padding-bottom: 4px;
+        }
+
+        .support-final-cta {
+            margin-top: 60px;
+            background: linear-gradient(135deg, #0a2540, #174a7e);
+            color: white;
+            border-radius: 18px;
+            text-align: center;
+            padding: 45px 24px;
+        }
+
+        .support-final-cta h2 {
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .support-final-cta p {
+            font-size: 17px;
+            line-height: 1.6;
+            opacity: .94;
+        }
+
+        @media (max-width: 700px) {
+            .support-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .support-button {
+                text-align: center;
+            }
+        }
+
 </style>
 </head>
 
@@ -852,6 +990,7 @@
             <a href="#pricing">Gói sử dụng</a>
             <a href="#interface">Giao diện</a>
             <a href="#install">Cài đặt</a>
+            <a href="#support">Hỗ trợ</a>
             <a class="nav-download" href="#download">Tải xuống</a>
         </nav>
 
@@ -1319,11 +1458,181 @@
 
 </section>
 
+
+<section class="support-section" id="support">
+
+    <h2 class="section-title">
+        Hỗ trợ người dùng
+    </h2>
+
+    <p class="section-desc">
+        Nếu gặp khó khăn trong quá trình cài đặt, đăng nhập,
+        thanh toán hoặc sử dụng AI Exam Factory,
+        bạn có thể liên hệ để được hỗ trợ.
+    </p>
+
+    <div class="support-card">
+
+        <div class="support-email-block">
+            <div class="support-icon">✉</div>
+
+            <div>
+                <div class="support-label">
+                    Email hỗ trợ
+                </div>
+
+                <a
+                    class="support-email"
+                    href="mailto:syhienpro144@gmail.com">
+                    syhienpro144@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <a
+            class="support-button"
+            href="mailto:syhienpro144@gmail.com?subject=Hỗ trợ AI Exam Factory">
+            GỬI EMAIL HỖ TRỢ
+        </a>
+
+    </div>
+
+
+    <div class="faq-wrap">
+
+        <h2 class="section-title faq-title">
+            Câu hỏi thường gặp
+        </h2>
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+                <summary>
+                    Tôi quên mật khẩu thì làm thế nào?
+                </summary>
+
+                <p>
+                    Tại màn hình đăng nhập, sử dụng chức năng
+                    Quên mật khẩu và làm theo hướng dẫn
+                    để đặt lại mật khẩu tài khoản.
+                </p>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    Tôi đã thanh toán nhưng tài khoản chưa lên PRO?
+                </summary>
+
+                <p>
+                    Sau khi thanh toán đúng số tiền và đúng nội dung
+                    chuyển khoản, hệ thống sẽ tự động xác nhận
+                    và cập nhật gói PRO.
+                </p>
+
+                <p>
+                    Nếu sau một khoảng thời gian tài khoản vẫn chưa
+                    được cập nhật, không nên chuyển tiền thêm lần nữa.
+                    Hãy liên hệ email hỗ trợ và cung cấp thông tin giao dịch.
+                </p>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    Windows SmartScreen hiện cảnh báo khi cài đặt thì sao?
+                </summary>
+
+                <p>
+                    AI Exam Factory hiện được phát hành trực tiếp
+                    từ trang tải chính thức. Với phần mềm mới chưa có
+                    chữ ký số thương mại, Windows có thể hiển thị
+                    cảnh báo SmartScreen.
+                </p>
+
+                <p>
+                    Hãy kiểm tra đúng tên file và mã SHA-256 trên website
+                    trước khi tiếp tục cài đặt.
+                </p>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    Dữ liệu ngân hàng câu hỏi của tôi được lưu ở đâu?
+                </summary>
+
+                <p>
+                    Dữ liệu làm việc của AI Exam Factory được lưu
+                    trong thư mục dữ liệu mà ứng dụng sử dụng trên máy tính.
+                    Người dùng có thể lựa chọn hoặc kết nối lại thư mục
+                    dữ liệu trong phần Cài đặt của phần mềm.
+                </p>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    Tôi có bị mất dữ liệu khi cập nhật phiên bản mới không?
+                </summary>
+
+                <p>
+                    Bộ cài đặt chương trình và thư mục dữ liệu người dùng
+                    được tách riêng. Tuy nhiên, trước các thay đổi lớn,
+                    người dùng vẫn nên sao lưu dữ liệu quan trọng.
+                </p>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    Làm thế nào để tải phiên bản mới nhất?
+                </summary>
+
+                <p>
+                    Nút tải trên website luôn tự động dẫn đến
+                    bản phát hành mới nhất của AI Exam Factory.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <div class="support-final-cta">
+
+        <h2>
+            Sẵn sàng sử dụng AI Exam Factory?
+        </h2>
+
+        <p>
+            Bắt đầu miễn phí và nâng cấp PRO khi bạn cần
+            sử dụng đầy đủ các tính năng.
+        </p>
+
+        <a
+            class="download-btn"
+            href="https://github.com/mrhien144/AI_Exam_Factory_Download/releases/latest">
+            TẢI PHIÊN BẢN MỚI NHẤT
+        </a>
+
+    </div>
+
+</section>
+
 </main>
 
 
 <footer class="footer">
-    © 2026 Bản quyền thuộc về Mr Hiển
+    
+© 2026 Bản quyền thuộc về Mr Hiển
+<br>
+Hỗ trợ: <a href="mailto:syhienpro144@gmail.com"
+style="color:#b8d7ff;text-decoration:none;">
+syhienpro144@gmail.com
+</a>
+
 </footer>
 
 
