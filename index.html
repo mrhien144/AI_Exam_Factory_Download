@@ -174,8 +174,8 @@
         TẢI AI EXAM FACTORY
     </a>
 
-    <div class="version">
-        Phiên bản 1.0.0 • Windows 64-bit • Bộ cài khoảng 62,76 MB
+    <div class="version" id="releaseInfo">
+        Đang kiểm tra phiên bản mới nhất...
     </div>
 
 </section>
@@ -257,7 +257,7 @@
 
         <p>
             <strong>Phiên bản hiện tại:</strong>
-            AI Exam Factory 1.0.0
+            <span id="currentVersion">Đang cập nhật...</span>
         </p>
 
     </div>
@@ -273,13 +273,17 @@
 <script>
 (async function () {
     const button = document.getElementById("downloadBtn");
+    const releaseInfo = document.getElementById("releaseInfo");
+    const currentVersion = document.getElementById("currentVersion");
 
     try {
         const response = await fetch(
             "https://api.github.com/repos/mrhien144/AI_Exam_Factory_Download/releases/latest"
         );
 
-        if (!response.ok) return;
+        if (!response.ok) {
+            throw new Error("Không lấy được thông tin Release");
+        }
 
         const release = await response.json();
 
@@ -288,11 +292,50 @@
             asset.name.toLowerCase().startsWith("ai_exam_factory_setup")
         );
 
+        const version = String(release.tag_name || "")
+            .replace(/^v/i, "") || "Không xác định";
+
+        if (currentVersion) {
+            currentVersion.textContent = "AI Exam Factory " + version;
+        }
+
         if (installer) {
             button.href = installer.browser_download_url;
+
+            const sizeMB = installer.size / (1024 * 1024);
+
+            const published = new Date(release.published_at);
+
+            const dateText = published.toLocaleDateString(
+                "vi-VN",
+                {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric"
+                }
+            );
+
+            if (releaseInfo) {
+                releaseInfo.textContent =
+                    "Phiên bản " + version +
+                    " • Windows 64-bit" +
+                    " • Bộ cài " + sizeMB.toFixed(2).replace(".", ",") + " MB" +
+                    " • Phát hành " + dateText;
+            }
+        } else {
+            if (releaseInfo) {
+                releaseInfo.textContent =
+                    "Phiên bản " + version + " • Windows 64-bit";
+            }
         }
+
     } catch (error) {
-        console.log("Không lấy được bản phát hành mới nhất.");
+        console.log(error);
+
+        if (releaseInfo) {
+            releaseInfo.textContent =
+                "AI Exam Factory • Windows 64-bit";
+        }
     }
 })();
 </script>
