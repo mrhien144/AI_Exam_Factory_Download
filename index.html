@@ -472,6 +472,226 @@
             }
         }
 
+
+        .hero {
+            padding: 72px 24px 78px;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            max-width: 1180px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .hero-copy {
+            min-width: 0;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: rgba(80, 151, 255, .15);
+            border: 1px solid rgba(117, 177, 255, .35);
+            color: #a9d0ff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .7px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.08;
+            margin: 0 0 22px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: #68a6ff;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.75;
+            margin: 0;
+            max-width: 620px;
+            color: #e3edf8;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-primary {
+            margin-top: 0;
+            padding: 17px 25px;
+        }
+
+        .hero-secondary {
+            display: inline-block;
+            padding: 16px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,.34);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background .2s ease;
+        }
+
+        .hero-secondary:hover {
+            background: rgba(255,255,255,.10);
+        }
+
+        .hero .version {
+            margin-top: 18px;
+            color: #cbd9e9;
+            font-size: 14px;
+        }
+
+        .hero-benefits {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            color: #dbe9f7;
+            font-size: 14px;
+        }
+
+        .hero-visual {
+            position: relative;
+            padding-bottom: 35px;
+        }
+
+        .hero-window {
+            background: #071321;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:
+                0 30px 70px rgba(0,0,0,.35),
+                0 0 0 1px rgba(255,255,255,.04);
+            transform: perspective(1200px) rotateY(-2deg);
+        }
+
+        .hero-window-bar {
+            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 0 14px;
+            background: #0d1b2d;
+            color: #8fa5be;
+            font-size: 12px;
+        }
+
+        .hero-window-bar span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #526579;
+        }
+
+        .hero-window-bar div {
+            margin-left: 7px;
+        }
+
+        .hero-app-image {
+            width: 100%;
+            display: block;
+            cursor: zoom-in;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            right: -15px;
+            bottom: 0;
+            background: white;
+            color: #102a43;
+            border-radius: 13px;
+            padding: 15px 18px;
+            box-shadow: 0 14px 35px rgba(0,0,0,.23);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 245px;
+        }
+
+        .hero-floating-card strong {
+            color: #174a7e;
+            font-size: 14px;
+        }
+
+        .hero-floating-card span {
+            color: #677487;
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero-copy {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions,
+            .hero-benefits {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                max-width: 720px;
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 48px 18px 58px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-actions a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-floating-card {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin: 14px auto 0;
+            }
+        }
+
 </style>
 </head>
 
@@ -496,28 +716,87 @@
     </div>
 </header>
 
+
 <section class="hero" id="download">
 
-    <h1>AI Exam Factory</h1>
+    <div class="hero-inner">
 
-    <p>
-        Phần mềm hỗ trợ giáo viên tạo đề,
-        quản lý ngân hàng câu hỏi,
-        trộn nhiều mã đề và xuất đề thi
-        sang Word hoặc PDF.
-    </p>
+        <div class="hero-copy">
 
-    <a class="download-btn"
-       id="downloadBtn"
-       href="https://github.com/mrhien144/AI_Exam_Factory_Download/releases/latest">
-        TẢI AI EXAM FACTORY
-    </a>
+            <div class="hero-label">
+                PHẦN MỀM HỖ TRỢ GIÁO VIÊN
+            </div>
 
-    <div class="version" id="releaseInfo">
-        Đang kiểm tra phiên bản mới nhất...
+            <h1>
+                Tạo đề nhanh hơn với
+                <span>AI Exam Factory</span>
+            </h1>
+
+            <p class="hero-description">
+                Quản lý ngân hàng câu hỏi, tạo đề theo yêu cầu,
+                xây dựng ma trận, trộn nhiều mã đề và xuất Word/PDF
+                trong một ứng dụng duy nhất.
+            </p>
+
+            <div class="hero-actions">
+
+                <a class="download-btn hero-primary"
+                   id="downloadBtn"
+                   href="https://github.com/mrhien144/AI_Exam_Factory_Download/releases/latest">
+                    TẢI MIỄN PHÍ CHO WINDOWS
+                </a>
+
+                <a class="hero-secondary"
+                   href="#interface">
+                    XEM GIAO DIỆN
+                </a>
+
+            </div>
+
+            <div class="version" id="releaseInfo">
+                Đang kiểm tra phiên bản mới nhất...
+            </div>
+
+            <div class="hero-benefits">
+                <span>✓ Bắt đầu miễn phí</span>
+                <span>✓ Windows 10/11</span>
+                <span>✓ Cài đặt nhanh</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-window">
+
+                <div class="hero-window-bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div>AI Exam Factory</div>
+                </div>
+
+                <img
+                    src="assets/screenshots/dashboard.png"
+                    alt="Giao diện AI Exam Factory"
+                    class="hero-app-image"
+                    onclick="openScreenshot(this.src, this.alt)"
+                >
+
+            </div>
+
+            <div class="hero-floating-card">
+                <strong>Tạo đề • Trộn mã • Word/PDF</strong>
+                <span>Một quy trình thống nhất cho giáo viên</span>
+            </div>
+
+        </div>
+
     </div>
 
 </section>
+
 
 
 <main class="container">
